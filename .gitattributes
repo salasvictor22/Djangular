@@ -1,0 +1,11 @@
+* text=auto
+
+# Configurar archivos específicos para usar LF
+*.sh text eol=lf
+
+# Ignorar cambios en archivos binarios
+*.png binary
+*.jpg binary
+
+# Para asegurarte de que los archivos .po se manejen adecuadamente
+*.po text
