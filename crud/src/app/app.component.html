@@ -1,10 +1,10 @@
-<!--Mi lista aqui va -->
-  <h2>Lista de Movies:</h2>
-  <ul>
-    <li *ngFor="let movie of movies">
-      <h2> {{movie.id }}: Titulo: {{ movie.title }} <br>
-Descripcion: {{ movie.desc }}. Año: {{ movie.year }}</h2>
-    </li>
-  </ul>
+<!-- Mi lista aquí va -->
+<h2>Lista de Movies:</h2>
+<ul>
+  <li *ngFor="let movie of movies">
+    <h2>{{ movie.id }}: Título: {{ movie.title }} <br>
+    Año: {{ movie.year }}</h2>
+  </li>
+</ul>
 
 <router-outlet></router-outlet>
