@@ -9,8 +9,8 @@ import { ApiService } from './api.service';
 })
 export class AppComponent {
   movies = [
-    { id: 1, title: 'peli1', year: 2021 },
-    { id: 2, title: 'peli2', year: 2022 }
+    { id: 1, title: 'peli1', desc: 'Description for peli1', year: 2021 },
+    { id: 2, title: 'peli2', desc: 'Description for peli2', year: 2022 }
   ];
 
   constructor(private api: ApiService) {
@@ -18,14 +18,14 @@ export class AppComponent {
   }
 
   getMovies = () => {
-    this.api.getAllMovies().subscribe(
-      data => {
-        console.log(data);
-        //this.movies = data;  //data.results; // Descomentar si tienes datos
-      },
-      error => {
-        console.log(error);
-      }
-    );
+	this.api.getAllMovies().subscribe(
+		data => {
+			console.log(data);
+			this.movies = data;  // Asegúrate de asignar los datos a movies
+		},
+		error => {
+			console.log(error);
+		}
+	);
   }
 }
